@@ -1,0 +1,86 @@
+[project]
+authors = [{name = "lloyd42", email = "tioplato42@gmail.com"}]
+description = "This is a template repository for Python projects that use uv for their dependency management."
+keywords = ['python']
+name = "uv-aio-template"
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+version = "0.0.1"
+
+[dependency-groups]
+dev = [
+  "pytest>=7.2.0",
+  "pre-commit>=2.20.0",
+  "tox-uv>=1.11.3",
+  "deptry>=0.20.0",
+  "mypy>=0.991",
+  "pytest-cov>=4.0.0",
+  "ruff>=0.6.9",
+  "mkdocs>=1.4.2",
+  "mkdocs-material>=8.5.10",
+  "mkdocstrings[python]>=0.26.1",
+]
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools >= 61.0"]
+
+[tool.setuptools]
+py-modules = ["app"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_untyped_defs = true
+files = ["app"]
+no_implicit_optional = true
+show_error_codes = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+fix = true
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = [
+  # LineTooLong
+  "E501", # DoNotAssignLambda
+  "E731",
+]
+select = [
+  # flake8-2020
+  "YTT", # flake8-bandit
+  "S", # flake8-bugbear
+  "B", # flake8-builtins
+  "A", # flake8-comprehensions
+  "C4", # flake8-debugger
+  "T10", # flake8-simplify
+  "SIM", # isort
+  "I", # mccabe
+  "C90", # pycodestyle
+  "E",
+  "W", # pyflakes
+  "F", # pygrep-hooks
+  "PGH", # pyupgrade
+  "UP", # ruff
+  "RUF", # tryceratops
+  "TRY",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.format]
+preview = true
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["app"]
