@@ -4,7 +4,7 @@ description = "This is a template repository for Python projects that use uv for
 keywords = ['python']
 name = "uv-aio-template"
 readme = "README.md"
-requires-python = ">=3.9,<4.0"
+requires-python = ">=3.9,<3.13"
 version = "0.0.1"
 
 [dependency-groups]
