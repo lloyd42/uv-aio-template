@@ -1,9 +1,14 @@
 name: release-main
 
+# on:
+#   release:
+#     types: [published]
+#     branches: [main]
+
 on:
-  release:
-    types: [published]
-    branches: [main]
+  push:
+    tags:
+      - "v*"
 
 jobs:
   deploy-docs:
