@@ -9,7 +9,7 @@ version = "0.0.1"
 
 [dependency-groups]
 dev = [
-  "pytest>=8.3.3",
+  "pytest>=8.3.4",
   "pre-commit>=4.0.1",
   "tox-uv>=1.16.0",
   "deptry>=0.21.1",
@@ -17,7 +17,7 @@ dev = [
   "pytest-cov>=6.0.0",
   "ruff>=0.8.1",
   "mkdocs>=1.6.1",
-  "mkdocs-material>=9.5.46",
+  "mkdocs-material>=9.5.47",
   "mkdocstrings[python]>=0.27.0",
 ]
 
