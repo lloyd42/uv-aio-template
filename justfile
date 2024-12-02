@@ -1,5 +1,5 @@
-# use PowerShell replace sh
-set shell := ["powershell.exe", "-c"]
+# use PowerShell replace sh in Windows
+set windows-shell := ["powershell.exe", "-c"]
 
 # default task: show the available tasks
 default:
