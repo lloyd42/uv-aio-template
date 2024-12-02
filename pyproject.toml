@@ -5,7 +5,7 @@ keywords = ['python']
 name = "uv-aio-template"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
-version = "0.0.1"
+version = "0.0.2"
 
 [dependency-groups]
 dev = [
