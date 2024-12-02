@@ -65,24 +65,7 @@ jobs:
         run: uvx --from build pyproject-build --installer uv
 
       - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ needs.set-version.outputs.version }}
-          release_name: Release v${{ needs.set-version.outputs.version }}
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Uploading $file"
-          curl -X POST \
-            https://uploads.github.com/repos/${GITHUB_REPOSITORY}/releases/${create_release.outputs.release_id}/assets \
-            -H 'Authorization: Bearer ${GITHUB_TOKEN}' \
-            -H 'Content-Type: application/octet-stream' \
-            -T "$file"
-          done
+          gh release create ${{ github.ref_name }} ./dist/* --generate-notes
