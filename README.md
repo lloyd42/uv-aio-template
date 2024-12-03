@@ -1,5 +1,11 @@
 # uv-aio-template
 
+[![Supported Python versions](https://img.shields.io/badge/python-3.9_%7C_3.10_%7C_3.11_%7C_3.12_%7C_3.13-blue?labelColor=grey&color=blue)](https://github.com/lloyd42/uv-aio-template/blob/main/pyproject.toml)
+[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://lloyd42.github.io/uv-aio-template/)
+[![Release](https://img.shields.io/github/v/release/lloyd42/uv-aio-template)](https://img.shields.io/github/v/release/lloyd42/uv-aio-template)
+[![Build status](https://img.shields.io/github/actions/workflow/status/lloyd42/uv-aio-template/main.yml?branch=main)](https://github.com/lloyd42/uv-aio-template/actions/workflows/main.yml?query=branch%3Amain)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/lloyd42/uv-aio-template)](https://img.shields.io/github/commit-activity/m/lloyd42/uv-aio-template)
+
 This is a template repository for Python projects that use uv for their dependency management.
 
 - **Github repository**: <https://github.com/lloyd42/uv-aio-template/>
@@ -55,6 +61,13 @@ For activating the automatic documentation with MkDocs, see [here](https://fpgma
 To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
 
 ## Releasing a new version
+
+To release a new version of your project, follow these steps:
+
+1. Update the version number in `pyproject.toml` and `README.md`.
+2. Commit the changes and push to your repository.
+3. Create a new tag and push to your repository.
+4. The CI/CD pipeline will automatically build and create a new release by current tag.
 
 ---
 

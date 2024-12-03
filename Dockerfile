@@ -18,4 +18,4 @@ ADD . /app
 # Sync the project
 RUN uv sync --frozen
 
-CMD [ "python", "uv_aio_template/foo.py"]
+CMD [ "python", "app/foo.py"]
